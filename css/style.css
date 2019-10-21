@@ -32,6 +32,7 @@ footer {
   background-color: #40474e;
   background-size: cover;
   color: white;
+  max-height: 40px;
 }
 footer .row {
   padding: 1.5rem 0 4rem;
@@ -42,6 +43,10 @@ footer img {
 }
 footer h3 {
   margin: 1.5rem 0;
+}
+
+foot {
+  max-height: 20px;
 }
 
 /*-- Extra Bootstrap Column Padding --*/

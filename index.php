@@ -76,27 +76,7 @@
 	</div>
 	<!--- End Two Column Section -->
 
-	<!--- Start Footer -->
-	<footer>
-		<div class="container">
-			<div class="row text-center py-5">
-				<div class="col-md-4">
-					<h3 class="text-center">ADDRESS</h3>
-					<p>Jl. Kapt. Kyai Ilyas 31A Lumajang</p>
-				</div>
-				<div class="col-md-4">
-					<h3 class="text-center">CONTACT INFO</h3><strong>Contact Info</strong>
-					<p><img src="img/logo_telp.png" width="20" height="20"> (888) 888-8888<br>
-					<img src="img/email.jpg" width="20" height="15"> cintyawedding@gmail.com</p>
-				</div>
-				<div class="col-md-4 pb-5">
-					<h3 class="text-center">CONNECT WITH US</h3><br>
-					<a class="btn btn-outline-light btn-lg" href="">W3NEWBIE COURSES</a>
-				</div>
-			</div><!--- End of Row -->
-		</div><!--- End of Container -->
-	</footer>
-	<!--- End of Footer -->
+	<?php include 'includes/footer.php' ?>
 
 <!--- Script Source Files -->
 <script src="js/jquery-3.3.1.min.js"></script> 
