@@ -23,8 +23,10 @@
 	<div class="container">
 		<div class="row justify-content-center text-center">
 			<div class="col-10 py-5">
-				<h2>Advanced Bootstrap Theme Udemy Course</h2>
-				<p class="lead">Bootstrap is an open-source front-end library with HTML and CSS based designs. This website is built with HTML5, CSS3 and Bootstrap 4.</p><a class="btn btn-purple btn-lg" href="https://w3newbie.com/courses/" target="_blank">W3NEWBIE COURSES</a>
+				<h2>Login atau Register</h2>
+				<p class="lead">Login terlebih dahulu untuk melakukan pemesanan. Register dahulu jika belum mempunyai akun</p>
+				<a class="btn btn-purple btn-lg" href="login.php" target="_blank">Login</a>
+				<a class="btn btn-purple btn-lg" href="register.php" target="_blank">Register</a>
 			</div>
 		</div>
 	</div>
@@ -33,27 +35,27 @@
 	<!--- Start Jumbotron -->
 	<div class="jumbotron">
 		<div class="container">
-			<h2 class="text-center pt-5 pb-3">BUILT WITH THE BEST</h2>
+			<h2 class="text-center pt-5 pb-3">CINTYA WEDDING ORGANIZER</h2>
 			<div class="row justify-content-center text-center">
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/html5.png">
-						<h3>HTML5</h3>
-						<p>HTML5 is the fifth and current major version of the HTML standard, and subsumes XHTML.</p>
+						<img src="img/galeri.png" width="250" height="250">
+						<h3>GALERI</h3>
+						<p>Lihat berbagai galeri pada Cintya Wedding Organizer untuk referensi anda.</p>
 					</div>
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/bootstrap4.png">
-						<h3>BOOTSTRAP 4</h3>
-						<p>Bootstrap is an open-source front-end library with HTML and CSS based designs.</p>
+						<img src="img/paket.png" width="250" height="250">
+						<h3>PAKET</h3>
+						<p>Pilih paket wedding sesuai dengan keinginan anda.</p>
 					</div>
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/css3.png">
-						<h3>CSS3</h3>
-						<p>CSS3 is the latest evolution of the Cascading Style Sheets language and aims at extending CSS2.</p>
+						<img src="img/testimoni.png" width="250" height="250">
+						<h3>TESTIMONI</h3>
+						<p>Lihat testimoni dari pelanggan kami disini.</p>
 					</div>
 				</div>
 			</div><!--- End Row -->
@@ -67,9 +69,9 @@
 			<div class="col-lg-6">
 				<h3 class="pb-4">Cintya Wedding Organizer</h3>
 				<p>Cintya wedding organizer merupakan salah satu upaya dalam membantu menyiapkan pesta pernikahan yang masih menggunakan pengelolaan secara manual mulai dari administrasi, pengelolaan data pemesanan, dan metode pembayaran. Proses manual tersebut sangat menyita waktu baik pengguna maupun pemilik Cintya Wedding Organizer seperti proses pemesanan yang pemesan diharuskan datang ke tempat untuk memilih paket yang akan dipilih.</p>
-				<a class="btn btn-purple btn-lg" href="https://w3newbie.com/courses/">Pesan Sekarang</a>
+				<a class="btn btn-purple btn-lg" href="">Pesan Sekarang</a>
 			</div>
-			<div class="col-lg-6"><img class="img-fluid" src="img/responsive.png"></div>
+			<div class="col-lg-6"><img class="img-fluid" src="img/4.jpg"></div>
 		</div>
 	</div>
 	<!--- End Two Column Section -->
@@ -79,17 +81,17 @@
 		<div class="container">
 			<div class="row text-center py-5">
 				<div class="col-md-4">
-					<img src="img/bootstrap.png">
-					<p>At our core is a collection of design and development solutions that represent everything your business needs to compete in the modern marketplace.</p>
+					<h3 class="text-center">ADDRESS</h3>
+					<p>Jl. Kapt. Kyai Ilyas 31A Lumajang</p>
 				</div>
 				<div class="col-md-4">
 					<h3 class="text-center">CONTACT INFO</h3><strong>Contact Info</strong>
-					<p>(888) 888-8888<br>
-					email@nuno.com</p>
+					<p><img src="img/logo_telp.png" width="20" height="20"> (888) 888-8888<br>
+					<img src="img/email.jpg" width="20" height="15"> cintyawedding@gmail.com</p>
 				</div>
 				<div class="col-md-4 pb-5">
 					<h3 class="text-center">CONNECT WITH US</h3><br>
-					<a class="btn btn-outline-light btn-lg" href="https://w3newbie.com/courses/">W3NEWBIE COURSES</a>
+					<a class="btn btn-outline-light btn-lg" href="">W3NEWBIE COURSES</a>
 				</div>
 			</div><!--- End of Row -->
 		</div><!--- End of Container -->
