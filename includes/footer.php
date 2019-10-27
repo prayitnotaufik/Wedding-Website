@@ -10,7 +10,7 @@
 					<h5 class="text-center">CONTACT INFO</h5>
 					<p>Cintyawedding@gmail.com</p>
 				</div>
-				<div class="col-md-4 pb-5">
+				<div class="col-md-4">
 					<h5 class="text-center">CONNECT WITH US</h5>
 				</div>
 			</div><!--- End of Row -->

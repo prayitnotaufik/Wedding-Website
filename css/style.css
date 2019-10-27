@@ -32,6 +32,7 @@ footer {
   background-color: #40474e;
   background-size: cover;
   color: white;
+  bottom: 0;
 
 }
 footer .row {
