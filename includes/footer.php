@@ -1,6 +1,6 @@
 <!--- Start Footer -->
 	<footer>
-		<div class="container" >
+		<div class="container">
 			<div class="row text-center">
 				<div class="col-md-4">
 					<h5 class="text-center">ADDRESS</h5>
