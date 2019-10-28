@@ -19,48 +19,48 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image1.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image1.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal1.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image2.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image2.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal2.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image3.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image3.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal3.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image4.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image4.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal4.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image5.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image5.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal5.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image6.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image6.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal6.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image7.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image7.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal7.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image8.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image8.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal8.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="img/image9.jpg">
-                            <img class="img-fluid image scale-on-hover" src="img/image9.jpg">
+                        <a class="lightbox" href="#">
+                            <img class="img-fluid image scale-on-hover" src="img/gal9.png">
                         </a>
                     </div>
                 </div>

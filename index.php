@@ -4,11 +4,11 @@
 <body>
 	<?php include 'includes/navbar.php'?>
 	<!--- Image Slider -->
-	<div class="carousel slide" data-ride="carousel">
+	<div class="carousel slide" data-ride="carousel" data-interval="7000">
 		<div class="carousel-inner">
-			<div class="carousel-item active"><img src="img/laptop.png"></div>
-			<div class="carousel-item"><img src="img/sky.png"></div>
-			<div class="carousel-item"><img src="img/bridge.png"></div>
+			<div class="carousel-item active"><img src="img/slider1.png"></div>
+			<div class="carousel-item"><img src="img/slider2.png"></div>
+			<div class="carousel-item"><img src="img/slider3.png"></div>
 		</div>
 	</div>
 	<!--- End Image Slider -->
@@ -33,21 +33,21 @@
 			<div class="row justify-content-center text-center">
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/galeri.png" width="250" height="250">
+						<img src="img/cgaleri.png" width="250" height="250">
 						<h3>GALERI</h3>
 						<p>Lihat berbagai galeri pada Cintya Wedding Organizer untuk referensi anda.</p>
 					</div>
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/paket.png" width="250" height="250">
+						<img src="img/cpaket.png" width="250" height="250">
 						<h3>PAKET</h3>
 						<p>Pilih paket wedding sesuai dengan keinginan anda.</p>
 					</div>
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/testimoni.png" width="250" height="250">
+						<img src="img/ctesti.png" width="250" height="250">
 						<h3>TESTIMONI</h3>
 						<p>Lihat testimoni dari pelanggan kami disini.</p>
 					</div>
