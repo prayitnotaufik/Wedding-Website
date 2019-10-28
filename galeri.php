@@ -19,47 +19,47 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal1.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal1.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal2.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal2.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal3.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal3.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal4.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal4.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal5.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal5.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal6.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal6.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal7.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal7.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal8.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal8.png">
                         </a>
                     </div>
                     <div class="col-md-6 col-lg-4 item">
-                        <a class="lightbox" href="#">
+                        <a class="lightbox" href="img/gal9.png">
                             <img class="img-fluid image scale-on-hover" src="img/gal9.png">
                         </a>
                     </div>
