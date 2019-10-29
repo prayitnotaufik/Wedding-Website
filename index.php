@@ -1,3 +1,4 @@
+<?php include 'config/connection.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'includes/head.php'?>
@@ -33,21 +34,22 @@
 			<div class="row justify-content-center text-center">
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/cgaleri.png" width="250" height="250">
+						<a href="galeri.php"><img src="img/cgaleri.png" width="250" height="250"></a>
 						<h3>GALERI</h3>
 						<p>Lihat berbagai galeri pada Cintya Wedding Organizer untuk referensi anda.</p>
 					</div>
+					
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/cpaket.png" width="250" height="250">
+						<a href="paket.php"><img src="img/cpaket.png" width="250" height="250"></a>
 						<h3>PAKET</h3>
 						<p>Pilih paket wedding sesuai dengan keinginan anda.</p>
 					</div>
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<img src="img/ctesti.png" width="250" height="250">
+						<a href="testimoni.php"><img src="img/ctesti.png" width="250" height="250"></a>
 						<h3>TESTIMONI</h3>
 						<p>Lihat testimoni dari pelanggan kami disini.</p>
 					</div>

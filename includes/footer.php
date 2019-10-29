@@ -7,12 +7,12 @@
 					<p>Jl. Kapt. Kyai Ilyas 31A</p>
 					<p style="margin-top: -4%;">Tompokersan - Lumajang</p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 center">
 					<h5 class="column">CONTACT INFO</h5>
 					<p><i class="far fa-envelope"></i> cintyawedding@gmail.com</p>
 					<p style="margin-top: -4%;"><i class="fas fa-phone"></i> (0334)889345</p>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 center">
 					<h5 class="column">CONNECT WITH US</h5>
 					<a class="text-white" href="https://facebook.com/" target="_blank"><i class="fab fa-facebook fa-2x"></i></a>
 					<a class="text-white" href="https://instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x" style="margin-left: 7%;"></i></i></a>
