@@ -49,7 +49,7 @@
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
-						<a href="testimoni"><img src="img/ctesti.png" width="250" height="250"></a>
+						<a href="testimoni.php"><img src="img/ctesti.png" width="250" height="250"></a>
 						<h3>TESTIMONI</h3>
 						<p>Lihat testimoni dari pelanggan kami disini.</p>
 					</div>
