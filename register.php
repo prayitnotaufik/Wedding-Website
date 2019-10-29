@@ -17,7 +17,7 @@
                 <h1 class="text-center">Register Pelanggan</h1>
             </div>
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8 offset-md-3">
                     <div class="panel panel-default">
                         <div class="panel-body">
                             <form method="post" class="form-horizontal">
@@ -54,6 +54,9 @@
                                 <div class="form-group">
                                     <div class="col-md-7 col-md-offset-3">
                                         <button class="btn btn-primary" name="daftar">Daftar</button>
+                                    </div>
+                                    <div class="row center">
+                                        <p class="text-center">Sudah Punya Akun? <a href="login.php">Login</a></p>
                                     </div>
                                 </div>
                             </form>
