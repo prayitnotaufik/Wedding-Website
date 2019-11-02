@@ -14,8 +14,11 @@
 					<li class="nav-item" style="margin-right:20px" >
 						<a class="nav-link" href="galeri.php">Galeri</a>
 					</li>
-					<li class="nav-item" style="margin-right:50px">
+					<li class="nav-item" style="margin-right:20px">
 						<a class="nav-link" href="paket.php">Paket</a>
+					</li>
+					<li class="nav-item" style="margin-right:50px">
+						<a class="nav-link" href="pemesanan.php">Pemesanan</a>
 					</li>
 				</ul>
 			</div>
