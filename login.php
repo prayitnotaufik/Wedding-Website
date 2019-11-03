@@ -23,10 +23,10 @@
                     <div class="col-s12">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                <form method="post">
+                                <form action="proses/proses_login.php" method="post">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" name="email">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" name="username">
                                     </div>
                                 <div class="form-group">
                                     <label>Password</label>
