@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-sm-12">
                         <label for="lokasi">Lokasi</label>
-                        <input class="form-control" type="text" value="" id="lokasi" placeholder="Masukkan Lokasi Penyelenggaraan">
+                        <input class="form-control" type="text" value="" id="lokasi" placeholder="Masukkan Lokasi Penyelenggaraan" >
                     </div>
                     <div class="col-sm-12">
                         <label for="catatan">Catatan</label>
@@ -45,6 +45,7 @@
     </div>
 
     <?php include 'includes/footer.php' ?>
+    <?php include 'includes/scripts.php' ?>
 </body>
 
 </html>
