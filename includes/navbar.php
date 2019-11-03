@@ -20,6 +20,9 @@
 				<li class="nav-item" style="margin-right:20px">
 					<a class="nav-link" href="status.php">Pemesanan</a>
 				</li>
+				<li class="nav-item" style="margin-right:20px">
+					<a class="nav-link" href="register.php">Register</a>
+				</li>
 			</ul>
 		</div>
 	</div>
