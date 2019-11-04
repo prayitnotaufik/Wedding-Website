@@ -20,7 +20,7 @@
                 </div>
                 <div class="card">
                 <div class="card-content">
-                    <div class="col-s12">
+                    <div class="col-sm-12">
                         <div class="panel panel-default">
                             <div class="panel-body">
                                 <form method="post">
