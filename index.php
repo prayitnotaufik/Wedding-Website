@@ -5,7 +5,7 @@
 <body>
 	<?php include 'includes/navbar.php'?>
 	<!--- Image Slider -->
-	<div class="carousel slide" data-ride="carousel" data-interval="7000">
+	<div class="carousel slide" data-ride="carousel" data-interval="5000">
 		<div class="carousel-inner">
 			<div class="carousel-item active"><img src="img/slider1.png"></div>
 			<div class="carousel-item"><img src="img/slider2.png"></div>

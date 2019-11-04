@@ -13,36 +13,37 @@
 <body>
     <?php include 'includes/navbar.php' ?>
     <section class="gallery-block grid-gallery">
-            <div class="container">
-                <div class="col-md-4 offset-md-4">
-                <div class="heading pt-5">
-                    <h1 class="text-center">Login Pelanggan</h1>
-                </div>
-                <div class="card">
-                <div class="card-content">
-                    <div class="col-sm-12">
-                        <div class="panel panel-default">
-                            <div class="panel-body">
-                                <form action="proses/proses_login.php" method="post">
-                                    <div class="form-group">
-                                        <label>Username</label>
-                                        <input type="text" class="form-control" name="username">
-                                    </div>
-                                <div class="form-group">
-                                    <label>Password</label>
-                                    <input type="password" class="form-control" name="password">
-                                </div>
-                                <button class="btn btn-primary" style="width:303px" name="login">Login</button>
-                                <p>
-                                <div class="text-center">
-                                        <p>Belum Punya Akun? <a href="register.php">Register</a></p>
-                                    </div>
-                            </form>
-                        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4" style="margin-right:120px">
+                    <div class="heading pt-5">
+                        <h1 class="text-center">Login Pelanggan</h1>
                     </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <form action="proses/proses_login.php" method="post">
+                                        <div class="form-group">
+                                            <label>Username</label>
+                                            <input type="text" class="form-control form-control-block" name="username">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Password</label>
+                                            <input type="password" class="form-control" name="password">
+                                        </div>
+                                        <button class="btn btn-primary" style="width:303px" name="login">Login</button>
+                                        <p>
+                                        <div class="text-center">
+                                                <p>Belum Punya Akun? <a href="register.php">Register</a></p>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
                 </div>
-                </div>
-                </div>
+                <div class="col-md-8" style="margin-right:-500px"><img class="img-fluid" src="img/bglogin.png"></div>
             </div>
         </div>
     </section>
