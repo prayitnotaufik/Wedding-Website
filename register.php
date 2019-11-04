@@ -17,14 +17,20 @@
                 <h1 class="text-center">Register Pelanggan</h1>
             </div>
             <div class="row">
-                <div class="col-md-8 col-md-offset-2">
+                <div class="col-md-8 offset-md-3">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                            <form method="post" class="form-horizontal">
+                            <form action="proses/proses_register.php" method="post" class="form-horizontal">
                                 <div class="form-group">
                                     <label class="control-label col-md-3">Nama</label>
                                     <div class="col-md-7">
                                         <input type="text" class="form-control" name="nama" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3">Username</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" name="username" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -36,7 +42,7 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-3">Password</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" name="password" required>
+                                        <input type="password" class="form-control" name="password" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -48,12 +54,15 @@
                                 <div class="form-group">
                                     <label class="control-label col-md-3">Nomor Telepon</label>
                                     <div class="col-md-7">
-                                        <input type="text" class="form-control" name="telepon" required>
+                                        <input type="number" class="form-control" name="telepon" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-7 col-md-offset-3">
                                         <button class="btn btn-primary" name="daftar">Daftar</button>
+                                    </div>
+                                    <div class="row center">
+                                        <p class="text-center">Sudah Punya Akun? <a href="login.php">Login</a></p>
                                     </div>
                                 </div>
                             </form>

@@ -14,26 +14,34 @@
     <?php include 'includes/navbar.php' ?>
     <section class="gallery-block grid-gallery">
             <div class="container">
+                <div class="col-md-4 offset-md-4">
                 <div class="heading pt-5">
                     <h1 class="text-center">Login Pelanggan</h1>
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="card">
+                <div class="card-content">
+                    <div class="col-s12">
                         <div class="panel panel-default">
                             <div class="panel-body">
-                                <form method="post">
+                                <form action="proses/proses_login.php" method="post">
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" name="email">
+                                        <label>Username</label>
+                                        <input type="text" class="form-control" name="username">
                                     </div>
                                 <div class="form-group">
                                     <label>Password</label>
                                     <input type="password" class="form-control" name="password">
                                 </div>
-                                <button class="btn btn-primary" name="login">Login</button>
+                                <button class="btn btn-primary" style="width:303px" name="login">Login</button>
+                                <p>
+                                <div class="text-center">
+                                        <p>Belum Punya Akun? <a href="register.php">Register</a></p>
+                                    </div>
                             </form>
                         </div>
                     </div>
+                </div>
+                </div>
                 </div>
             </div>
         </div>
