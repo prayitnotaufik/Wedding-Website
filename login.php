@@ -11,16 +11,26 @@
     <?php include 'includes/head.php'?>
 </head>
 <body>
+<style>
+    body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("img/bg1.jpg");
+    background-size: cover;
+    }
+</style>
     <?php include 'includes/navbar.php' ?>
     <section class="gallery-block grid-gallery">
         <div class="container">
             <div class="row">
                 <div class="col-md-4" style="margin-right:120px">
                     <div class="heading pt-5">
-                        <h1 class="text-center">Login Pelanggan</h1>
+                        <h1 class="text-center" style="color:white">Login Pelanggan</h1>
                     </div>
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card" style="background-color: rgba(0, 0, 0, 0.37)">
+                        <div class="card-body" style="color: white">
                             <div class="panel panel-default">
                                 <div class="panel-body">
                                     <form action="proses/proses_login.php" method="post">
@@ -35,7 +45,7 @@
                                         <button class="btn btn-primary" style="width:303px" name="login">Login</button>
                                         <p>
                                         <div class="text-center">
-                                                <p>Belum Punya Akun? <a href="register.php">Register</a></p>
+                                                <p>Belum Punya Akun? <a href="register.php" style="color: yellow">Register</a></p>
                                         </div>
                                     </form>
                                 </div>

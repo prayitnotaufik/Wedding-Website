@@ -11,20 +11,20 @@
 </head>
 <body>
 <style>
-      body {
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        background: url("img/bg1.jpg");
-        background-size: cover;
-      }
-    </style>
+    body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("img/bg1.jpg");
+    background-size: cover;
+    }
+</style>
     <?php include 'includes/navbar.php' ?>
     <section class="gallery-block grid-gallery">
         <div class="container">
             <div class="heading pt-5">
-                <h1 class="text-center">Register Pelanggan</h1>
+                <h1 class="text-center" style="color: white">Register Pelanggan</h1>
             </div>
             <div class="row justify-content-md-center">
                 <div class="card" style="background-color: rgba(0, 0, 0, 0.37);">
@@ -58,7 +58,7 @@
                     </div>
                     <button type="submit" class="btn btn-primary" style="width:100%">Daftar</button>
                     <p>
-                    <p class="text-center">Sudah Punya Akun? <a href="login.php">Login</a></p>
+                    <p class="text-center">Sudah Punya Akun? <a href="login.php" style="color: yellow">Login</a></p>
                     </form>
                     </div>
                     </div>   
