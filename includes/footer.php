@@ -10,7 +10,7 @@
 				<div class="col-md-4 center">
 					<h5 class="column">CONTACT INFO</h5>
 					<p><i class="far fa-envelope"></i> cintyawedding@gmail.com</p>
-					<p style="margin-top: -4%;"><i class="fas fa-phone"></i> (0334)889345</p>
+					<p style="margin-top: -4%;"><i class="fas fa-phone"></i> (0334)889364</p>
 				</div>
 				<div class="col-md-4 center">
 					<h5 class="column">CONNECT WITH US</h5>
