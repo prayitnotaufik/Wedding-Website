@@ -1,3 +1,8 @@
+<?php
+session_start();
+@$username = $_SESSION["username"];
+@$id_user = $_SESSION["id"];
+?>
 <!--- Navigation -->
 <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
 	<div class="container-fluid">
@@ -20,12 +25,23 @@
 				<li class="nav-item" style="margin-right:20px">
 					<a class="nav-link" href="status.php">Pemesanan</a>
 				</li>
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="admin.php">Admin</a>
-				</li>
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="register.php">Register</a>
-				</li>
+				<?php if ($username == 'admin') { ?>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="admin.php">Admin</a>
+					</li>
+				<?php } ?>
+				<?php if (isset($username)) { ?>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="proses/proses_logout.php">Logout</a>
+					</li>
+				<?php } else { ?>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="register.php">Register</a>
+					</li>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="login.php">Login</a>
+					</li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
