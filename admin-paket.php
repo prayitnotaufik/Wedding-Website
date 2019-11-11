@@ -22,11 +22,6 @@
                             <th scope="col">#</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Harga</th>
-                            <th scope="col">Dekorasi</th>
-                            <th scope="col">Rias & Baju</th>
-                            <th scope="col">Dokumentasi</th>
-                            <th scope="col">MC</th>
-                            <th scope="col">Free</th>
                             <th scope="col">Action</th>
 
                         </tr>
@@ -36,15 +31,17 @@
                             <td>1</td>
                             <td>Hemat</td>
                             <td>Rp.2000.000</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
+                            <td>
+                                <a role="button" class="btn btn-primary" href="">Detail</a>
+                                <a role="button" class="btn btn-primary" href="">Edit</a>
+                                <a role="button" class="btn btn-danger" href="">Delete</a>
+                            </td>
                         </tr> 
                     </tbody>
                 </table>
+            </div>
+            <div class="container-fluid">
+                <a name="" id="" class="btn btn-dark" href="tambah-paket.php" role="button">Tambah Paket</a>
             </div>
         </div>
         <!-- /#page-content-wrapper -->
