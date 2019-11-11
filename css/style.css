@@ -13,7 +13,7 @@ body {
 
 .btn-purple {
   border-color: #8366B0;
-  background-color: #8366B0;
+  background-color: rgb(131, 102, 176);
   color: white;
   margin: 1rem;
 }
@@ -56,9 +56,9 @@ foot {
   padding: 1rem;
 }
 
-.card {
+/* .card {
   min-height: ;
-}
+} */
 
 
 
