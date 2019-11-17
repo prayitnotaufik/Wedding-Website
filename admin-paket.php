@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <?php include 'config/connection.php' ?>
     <?php include 'includes/head.php' ?>
     <link href="css/simple-sidebar.css" rel="stylesheet">
 </head>
@@ -18,7 +19,7 @@
             <div class="container">
                 <table class="table table-striped table-bordered" style="background-color: white;">
                     <thead class="table-dark">
-                        <tr>
+                        <tr class="">
                             <th scope="col">#</th>
                             <th scope="col">Nama</th>
                             <th scope="col">Harga</th>
@@ -27,16 +28,27 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Hemat</td>
-                            <td>Rp.2000.000</td>
+                        <?php 
+                        $query = "SELECT * FROM paket";
+                        $result = mysqli_query($con,$query);
+                        if(mysqli_num_rows($result)>0){
+                            while($row = mysqli_fetch_assoc($result)){
+                        ?>
+                        <tr class="">
+                            <td> <?php echo $row["id_paket"] ?> </td>
+                            <td> <?php echo $row["nama_paket"] ?> </td>
+                            <td><?php echo $row["harga"] ?></td>
                             <td>
                                 <a role="button" class="btn btn-primary" href="">Detail</a>
-                                <a role="button" class="btn btn-primary" href="">Edit</a>
+                                <a role="button" class="btn btn-success" href="">Edit</a>
                                 <a role="button" class="btn btn-danger" href="">Delete</a>
                             </td>
-                        </tr> 
+                        </tr>
+                            <?php } ?>
+                        <?php } 
+                         // close mysql connection
+                         mysqli_close($con); 
+                        ?>  
                     </tbody>
                 </table>
             </div>

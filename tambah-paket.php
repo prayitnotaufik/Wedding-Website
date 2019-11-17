@@ -68,9 +68,6 @@
                             <button type="submit" class="btn btn-success btn-block btn-fill">Tambah</button>
                         </div>
                         <div class="col-md-2">
-                            <button class="btn btn-danger btn-block btn-fill" onclick=clearForm()>Clear Form</button>
-                        </div>
-                        <div class="col-md-2">
                             <a href="admin-paket.php" class="btn btn-warning btn-block btn-fill">Kembali</a>
                         </div>
                     </div>
