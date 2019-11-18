@@ -21,16 +21,10 @@
                     $_SESSION["username"] = $username;
                     $_SESSION["type"] = $row["type"];
                     header("Location: ../index.php");
-                } elseif ($row["level"] == 3) {
-                    $_SESSION["username"] = $username;
-                    $_SESSION["level"] = $row["level"];
-                    $_SESSION["id"] = $row["id"];
-                    header("Location: ../admin/company.php");
                 } else {
                     $_SESSION["username"] = $username;
-                    $_SESSION["level"] = $row["level"];
-                    $_SESSION["id"] = $row["id"];
-                    header("Location: ../index.php");
+                    $_SESSION["type"] = $row["type"];
+                    header("Location: ../admin.php");
                 }
             } else {
                 $error = urlencode("Username atau password salah!");

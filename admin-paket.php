@@ -40,7 +40,7 @@
                             <td><?php echo $row["harga"] ?></td>
                             <td>
                                 <a role="button" class="btn btn-primary" href="">Detail</a>
-                                <a role="button" class="btn btn-success" href="">Edit</a>
+                                <a role="button" class="btn btn-success" href="edit-paket.php?id=<?php echo $row["id_paket"] ?> ">Edit</a>
                                 <a role="button" class="btn btn-danger" href="">Delete</a>
                             </td>
                         </tr>
