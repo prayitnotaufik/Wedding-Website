@@ -33,6 +33,7 @@
                         $result = mysqli_query($con,$query);
                         if(mysqli_num_rows($result)>0){
                             while($row = mysqli_fetch_assoc($result)){
+                                $id = $row["id_paket"];
                         ?>
                         <tr class="">
                             <td> <?php echo $row["id_paket"] ?> </td>
@@ -40,8 +41,8 @@
                             <td><?php echo $row["harga"] ?></td>
                             <td>
                                 <a role="button" class="btn btn-primary" href="">Detail</a>
-                                <a role="button" class="btn btn-success" href="">Edit</a>
-                                <a role="button" class="btn btn-danger" href="">Delete</a>
+                                <a role="button" class="btn btn-success" href="edit-paket.php?id=<?php echo $row["id_paket"] ?> ">Edit</a>
+                                <a role="button" class="btn btn-danger" href="proses/proses_delete-paket.php?id=<?php echo $row["id_paket"] ?> ">Delete</a>
                             </td>
                         </tr>
                             <?php } ?>
