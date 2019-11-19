@@ -38,20 +38,13 @@
                     <img src="img/logo_telp.png" alt="telp" style="float:left;width:30px;height:30px;">
                     (0334)889345
                     </p>
-<<<<<<< HEAD
-                    <br>
-                    <h3 style="color:rgb(255, 166, 109)">Alamat</h3>
-                    <p>Jl. Kapt. Kyai Ilyas 31A</p>
-                    <p>Tompokersan - Lumajang</p>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.6962962683892!2d113.21658041428591!3d-8.132369494145893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6678a585d5db3%3A0x4598dffeffb08eb4!2sJl.%20Kapten%20Kyai%20Ilyas%2C%20Kec.%20Lumajang%2C%20Kabupaten%20Lumajang%2C%20Jawa%20Timur%2067316!5e0!3m2!1sid!2sid!4v1572189969157!5m2!1sid!2sid" width="1100" height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
-=======
                 </div>
             <div class="col-6">
                 <h3 style="color:rgb(255, 166, 109)">Alamat</h3>
                     <p>Jl. Kapt. Kyai Ilyas 31A Lumajang</p>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.6962962683892!2d113.21658041428591!3d-8.132369494145893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6678a585d5db3%3A0x4598dffeffb08eb4!2sJl.%20Kapten%20Kyai%20Ilyas%2C%20Kec.%20Lumajang%2C%20Kabupaten%20Lumajang%2C%20Jawa%20Timur%2067316!5e0!3m2!1sid!2sid!4v1572189969157!5m2!1sid!2sid"
                     height="400" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
->>>>>>> 9778dd450e397ddb6c8ea4eb8139d29948c65469
+
                 </div>
             </div> 
             </div>
