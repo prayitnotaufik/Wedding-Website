@@ -1,9 +1,10 @@
 <?php include 'config/connection.php' ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include 'includes/head.php'?>
+<?php include 'includes/head.php' ?>
+
 <body>
-	<?php include 'includes/navbar.php'?>
+	<?php include 'includes/navbar.php' ?>
 	<!--- Image Slider -->
 	<div class="carousel slide" data-ride="carousel" data-interval="5000">
 		<div class="carousel-inner">
@@ -38,7 +39,7 @@
 						<h3>GALERI</h3>
 						<p>Lihat berbagai galeri pada Cintya Wedding Organizer untuk referensi anda.</p>
 					</div>
-					
+
 				</div>
 				<div class="col-10 col-md-4">
 					<div class="feature">
@@ -54,8 +55,10 @@
 						<p>Lihat testimoni dari pelanggan kami disini.</p>
 					</div>
 				</div>
-			</div><!--- End Row -->
-		</div><!--- End Container -->
+			</div>
+			<!--- End Row -->
+		</div>
+		<!--- End Container -->
 	</div>
 	<!--- End Jumbotron -->
 
@@ -78,4 +81,5 @@
 
 
 </body>
+
 </html>

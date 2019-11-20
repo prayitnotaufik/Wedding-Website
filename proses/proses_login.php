@@ -28,7 +28,7 @@
                 }
             } else {
                 $error = urlencode("Username atau password salah!");
-                header("Location: ../login/login.php?pesan=$error");
+                header("Location: ../login.php?pesan=$error");
             }
 
             # Close connection to database
@@ -36,7 +36,7 @@
 
         } else {
             $error = urlencode("Username atau password kosong!");
-            header("Location: ../login/login.php?pesan=$error");
+            header("Location: ../login.php?pesan=$error");
         }
     }
 ?>
