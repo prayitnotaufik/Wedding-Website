@@ -100,17 +100,6 @@
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-4">
-                                                            <p>Rias & Baju</p>
-                                                        </div>
-                                                        <div class="col-md-1">
-                                                            <p>:</p>
-                                                        </div>
-                                                        <div style="" class="col-md-6">
-                                                            <p><?php echo $row["rias_baju"] ?></p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-4">
                                                             <p>Dokumentasi</p>
                                                         </div>
                                                         <div class="col-md-1">
