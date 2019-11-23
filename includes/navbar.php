@@ -1,7 +1,13 @@
 <?php
+include 'config/connection.php';
 session_start();
 @$username = $_SESSION["username"];
-@$id_user = $_SESSION["id"];
+@$type = $_SESSION["type"];
+
+
+$sql = "SELECT * FROM user WHERE type = '$type' ";
+$hasil = mysqli_query($con, $sql);
+$item = mysqli_fetch_assoc($hasil);
 ?>
 <!--- Navigation -->
 <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top">
@@ -10,31 +16,63 @@ session_start();
 		<button class="navbar-toggler" data-target="#navbarResponsive" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="index.php">Beranda</a>
-				</li>
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="tentang.php">Tentang</a>
-				</li>
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="galeri.php">Galeri</a>
-				</li>
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="paket.php">Paket</a>
-				</li>
-				<li class="nav-item" style="margin-right:20px">
-					<a class="nav-link" href="status.php">Pemesanan</a>
-				</li>
-				<?php if ($username == 'admin') { ?>
-					<li class="nav-item" style="margin-right:20px">
-						<a class="nav-link" href="admin.php">Admin</a>
-					</li>
-				<?php } ?>
-				<?php if (isset($username)) { ?>
-					<li class="nav-item" style="margin-right:20px">
-						<a class="nav-link" href="proses/proses_logout.php">Logout</a>
-					</li>
+				<?php
+				if (isset($username)) {
+					if ($item["type"] == 'admin') { ?>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="index.php">Beranda</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="tentang.php">Tentang</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="galeri.php">Galeri</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="paket.php">Paket</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="status2.php">Pemesanan</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="admin.php">Admin</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="proses/proses_logout.php">Logout</a>
+						</li>
+					<?php } else { ?>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="index.php">Beranda</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="tentang.php">Tentang</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="galeri.php">Galeri</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="paket.php">Paket</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="status2.php">Pemesanan</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="proses/proses_logout.php">Logout</a>
+						</li>
+					<?php } ?>
 				<?php } else { ?>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="index.php">Beranda</a>
+					</li>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="tentang.php">Tentang</a>
+					</li>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="galeri.php">Galeri</a>
+					</li>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="paket.php">Paket</a>
+					</li>
 					<li class="nav-item" style="margin-right:20px">
 						<a class="nav-link" href="register.php">Register</a>
 					</li>

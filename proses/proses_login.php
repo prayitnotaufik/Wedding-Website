@@ -17,14 +17,16 @@
 
             # If username exist in database, save to the session and redirect to profile.php
             if(mysqli_num_rows($result) == 1) {
-                if($row["type"] == 'customer') {
+                if($row["type"] == 'admin') {
                     $_SESSION["username"] = $username;
                     $_SESSION["type"] = $row["type"];
-                    header("Location: ../index.php");
+                    $_SESSION["id"] = $row["id_user"];
+                    header("Location: ../admin.php");
                 } else {
                     $_SESSION["username"] = $username;
                     $_SESSION["type"] = $row["type"];
-                    header("Location: ../admin.php");
+                    $_SESSION["id"] = $row["id_user"];
+                    header("Location: ../index.php");
                 }
             } else {
                 $error = urlencode("Username atau password salah!");

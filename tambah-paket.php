@@ -15,8 +15,7 @@
             <div class="container-fluid mt-3 ml-3">
                 <div class="row mb-3">
                     <h1 class="">Tambah Paket</h1><br>
-                </div>
-                    
+                </div>   
             </div>
             <div class="container">
                 <form action="proses/proses_tambah-paket.php" method="post" enctype="multipart/form-data">

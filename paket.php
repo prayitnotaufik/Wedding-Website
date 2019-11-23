@@ -10,20 +10,36 @@
         </div>
         <div class="row mb-5">
             <?php
+            $query2 = "SELECT * FROM user WHERE username = '$username'";
+            $getID = mysqli_query($con,$query2);
+            $item = mysqli_fetch_assoc($getID);
             $query = "SELECT * FROM paket";
             $result = mysqli_query($con,$query);
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_assoc($result)){ 
-                    $id = $row["id_paket"];
+                    $id_paket = $row["id_paket"];
                     // $count = $row["rias_baju"];
                     // $countArray = explode(",",$count);
                     $HitungDekorasi = count(explode(",",$row["dekorasi"]));
                     $HitungRias = count(explode(",",$row["rias_baju"]));
-                    $HitungDokumentasi = count(explode(",",$row["dokumentasi"]));
-                    $HitungMc = count(explode(",",$row["mc"]));
-                    $HitungFree = count(explode(",",$row["free"]));
-                    $SplitHarga = $row["harga"];
-                    $SplitHarga2 = str_split($SplitHarga,3);
+
+                    if($row["dokumentasi"]!=null){
+                        $HitungDokumentasi = count(explode(",",$row["dokumentasi"]));
+                    }else{
+                        $HitungDokumentasi = 0;
+                    }
+
+                    if($row["mc"]!=null){
+                        $HitungMc = count(explode(",",$row["mc"]));
+                    }else{
+                        $HitungMc = 0;
+                    }
+
+                    if($row["free"]!=null){
+                        $HitungFree = count(explode(",",$row["free"]));
+                    }else{
+                        $HitungFree = 0;
+                    }                   
                     ?>
                     <div class="col-lg-4 col-md-6">
                     <!--Panel-->
@@ -54,7 +70,7 @@
                             </ul>
                             <div class="mt-2">
                                 <button type="button" class="btn btn-block btn-secondary" disabled>Rp.<?php echo $row["harga"] ?>,-</button>
-                                <button type="button" class="btn btn-block btn-info">DETAIL & PESAN</button>
+                                <a href="pemesanan.php?id_paket=<?php echo $id_paket ?>&id_user=<?php echo $item["id_user"] ?>" class="btn btn-block btn-info">DETAIL & PESAN</a>
                             </div> 
                         </div>
                     </div>

@@ -38,7 +38,7 @@ $row = mysqli_fetch_assoc($result);
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="my-input">Harga</label>
-                                <input id="my-input" class="form-control" type="text" name="harga" value="<?php echo $row["harga"] ?>">
+                                <input id="my-input" class="form-control" type="number" name="harga" value="<?php echo $row["harga"] ?>">
                             </div>
                         </div>
                         <div class="col-md-4">
