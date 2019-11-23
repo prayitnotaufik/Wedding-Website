@@ -27,6 +27,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="container">
                 <form action="proses/proses_edit-paket.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="id" value="<?php echo $id ?>">
+                <input type="hidden" name="MAX_FILE_SIZE" value="2000000">
                     <div class="row">
                         <div class="col-md-4">
                             <div class="form-group">
@@ -68,6 +69,12 @@ $row = mysqli_fetch_assoc($result);
                             <div class="form-group">
                                 <label for="my-input">Free</label>
                                 <input id="my-input" class="form-control" type="text" name="free" value="<?php echo $row["free"] ?>">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label for="my-input">Foto</label>
+                                <input type="file" name="file" for="file" class="form-control" required>
                             </div>
                         </div>
                     </div>
