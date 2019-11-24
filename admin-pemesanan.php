@@ -90,8 +90,11 @@
                                             <!-- MODAL -->
                                         <?php } ?>
                                     </td>
-                                    <td><?php echo $row["status"] ?></td>
-
+                                    <td>
+                                        <?php echo $row["status"] ?>
+                                        <br>
+                                        selesai
+                                    </td>
                                 </tr>
                             <?php } ?>
                         <?php }

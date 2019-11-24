@@ -4,8 +4,7 @@
         <a href="admin-paket.php" class="list-group-item list-group-item-action bg-light">Paket</a>
         <a href="data-customer.php" class="list-group-item list-group-item-action bg-light">Data Customer</a>
         <a href="admin-pemesanan.php" class="list-group-item list-group-item-action bg-light">Pemesanan</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Galeri</a>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Status</a>
+        <a href="admin-galeri.php" class="list-group-item list-group-item-action bg-light">Galeri</a>
     </div>
 </div>
 <!-- /#sidebar-wrapper -->
