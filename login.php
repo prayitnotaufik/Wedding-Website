@@ -48,6 +48,9 @@
                                         <div class="text-center">
                                             <p>Belum Punya Akun? <a href="register.php" style="color: yellow">Register</a></p>
                                         </div>
+                                        <div class="text-center">
+                                            <p><?php echo @$_GET["pesan"] ?></p>
+                                        </div>
                                     </form>
                                 </div>
                             </div>
