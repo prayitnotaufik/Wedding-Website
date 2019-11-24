@@ -46,7 +46,7 @@
                                         <button class="btn btn-primary" style="width:303px" name="login">Login</button>
                                         <p>
                                         <div class="text-center">
-                                                <p>Belum Punya Akun? <a href="register.php" style="color: yellow">Register</a></p>
+                                            <p>Belum Punya Akun? <a href="register.php" style="color: yellow">Register</a></p>
                                         </div>
                                     </form>
                                 </div>
