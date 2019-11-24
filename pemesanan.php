@@ -2,11 +2,17 @@
 <html lang="en">
 <?php include 'config/connection.php' ?>
 <?php
-    $id_user = $_GET["id_user"];
-    $id_paket = $_GET["id_paket"];
-    $query = "SELECT * FROM paket WHERE id_paket = $id_paket";
-    $result = mysqli_query($con, $query);
-    $row = mysqli_fetch_assoc($result);
+$id_user = $_GET["id_user"];
+$id_paket = $_GET["id_paket"];
+$query = "SELECT * FROM paket WHERE id_paket = $id_paket";
+$result = mysqli_query($con, $query);
+$row = mysqli_fetch_assoc($result);
+
+$query2 = "SELECT * FROM pemesanan";
+$result2 = mysqli_query($con, $query2);
+$pemesanan = mysqli_fetch_assoc($result2);
+
+$dateNow = new DateTime();
 ?>
 <?php include 'includes/head.php' ?>
 
@@ -24,12 +30,31 @@
             </div>
             <div class="col-md-5 border border-primary">
                 <form action="proses/proses_pemesanan.php" method="POST" enctype="multipart/form-data">
-                <input type="hidden" name="id_user" value="<?php echo $id_user ?>">
-                <input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
+                    <input type="hidden" name="id_user" value="<?php echo $id_user ?>">
+                    <input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
                     <div>
                         <h4 class="text-center">Rincian Pemesanan</h4>
-                        <label for="">Tanggal yang sudah dipesan</label>
+
+                        <h6>Tanggal yang sudah dipesan :</h6>
+                        <?php
+                        if (mysqli_num_rows($result2) > 0) {
+                            while ($pemesanan = mysqli_fetch_assoc($result2)) { ?>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <label for="tanggal">Tanggal Pesan</label>
+                                        <input class="form-control" type="date" value="<?php echo $pemesanan["tgl_pesan"] ?>" id="tanngal" name="tanggal_pesan" disabled>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <label for="tanggal">Tanggal Selesai</label>
+                                        <input class="form-control" type="date" value="<?php echo $pemesanan["tgl_kembali"] ?>" id="tanngal" name="tanggal_kembali" disabled>
+                                    </div>
+                                </div>
+                        <?php }
+                        }
+                        ?>
                     </div>
+                    <hr>
+                    <h4 class="text-center">Pesanan Anda</h4>
                     <div class="row">
                         <div class="col-sm-6">
                             <label for="tanggal">Tanggal Pesan</label>
@@ -45,7 +70,7 @@
                         </div>
                         <div class="col-sm-12">
                             <label for="catatan">Catatan</label>
-                            <textarea rows="5" class="form-control" type="text" value="" id="lokasi" placeholder="Masukkan Catatan" name="catatan" ></textarea>
+                            <textarea rows="5" class="form-control" type="text" value="" id="lokasi" placeholder="Masukkan Catatan" name="catatan"></textarea>
                         </div>
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-block btn-primary">Pesan</button>

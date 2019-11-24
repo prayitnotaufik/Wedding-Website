@@ -70,7 +70,12 @@
                             </ul>
                             <div class="mt-2">
                                 <button type="button" class="btn btn-block btn-secondary" disabled>Rp.<?php echo $row["harga"] ?>,-</button>
-                                <a href="pemesanan.php?id_paket=<?php echo $id_paket ?>&id_user=<?php echo $item["id_user"] ?>" class="btn btn-block btn-info">DETAIL & PESAN</a>
+                                <?php
+                                    if (isset($username)) {?>
+                                        <a href="pemesanan.php?id_paket=<?php echo $id_paket ?>&id_user=<?php echo $item["id_user"] ?>" class="btn btn-block btn-info">DETAIL & PESAN</a>
+                                    <?php }else {?>
+                                        <button type="button" class="btn btn-block btn-secondary" disabled>Login Untuk Detail & Pesan</button>
+                                    <?php } ?>
                             </div> 
                         </div>
                     </div>

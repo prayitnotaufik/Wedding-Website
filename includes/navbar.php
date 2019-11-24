@@ -35,7 +35,7 @@ $item = mysqli_fetch_assoc($hasil);
 							<a class="nav-link" href="status2.php">Pemesanan</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">
-							<a class="nav-link" href="admin.php">Admin</a>
+							<a class="nav-link" href="admin-paket.php">Admin</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">
 							<a class="nav-link" href="proses/proses_logout.php">Logout</a>
