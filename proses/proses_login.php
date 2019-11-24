@@ -29,16 +29,22 @@
                     header("Location: ../index.php");
                 }
             } else {
-                $error = urlencode("Username atau password salah!");
-                header("Location: ../login.php?pesan=$error");
+                //$error = urlencode("Username atau password salah!");
+                //header("Location: ../login.php?pesan=$error");
+
+                echo "<script>alert('Anda Gagal Login, Username atau password salah'); </script>";
+                echo "<script>Location=login.php';</script>";
             }
 
             # Close connection to database
             mysqli_close($con);
 
         } else {
-            $error = urlencode("Username atau password kosong!");
-            header("Location: ../login.php?pesan=$error");
+            //$error = urlencode("Username atau password kosong!");
+            //header("Location: ../login.php?pesan=$error");
+
+            echo "<script>alert('Username atau password kosong!'); </script>";
+            echo "<script>Location=login.php';</script>";
         }
     }
 ?>
