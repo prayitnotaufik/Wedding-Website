@@ -15,25 +15,31 @@
 	</div>
 	<!--- End Image Slider -->
 
-	<!--- BOOTSTRAP UDEMY COURSE -->
-	<div class="container">
-		<div class="row justify-content-center text-center">
-			<div class="col-10 py-5">
-				<h2>Login atau Register</h2>
-				<p class="lead">Login terlebih dahulu untuk melakukan pemesanan. Register dahulu jika belum mempunyai akun</p>
-				<a class="btn btn-purple btn-lg" href="login.php" target="_blank">Login</a>
-				<a class="btn btn-purple btn-lg" href="register.php" target="_blank">Register</a>
+	<?php
+	if (isset($username)) { ?>
+
+	<?php } else { ?>
+		<!--- BOOTSTRAP UDEMY COURSE -->
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-10 py-5">
+					<h2>Login atau Register</h2>
+					<p class="lead">Login terlebih dahulu untuk melakukan pemesanan. Register dahulu jika belum mempunyai akun</p>
+					<a class="btn btn-purple btn-lg" href="login.php" target="_blank">Login</a>
+					<a class="btn btn-purple btn-lg" href="register.php" target="_blank">Register</a>
+				</div>
 			</div>
 		</div>
-	</div>
-	<!--- BOOTSTRAP UDEMY COURSE -->
+		<!--- BOOTSTRAP UDEMY COURSE -->
+	<?php } ?>
+
 
 	<!--- Start Jumbotron -->
 	<div class="jumbotron">
 		<div class="container">
 			<h2 class="text-center pt-5 pb-3">CINTYA WEDDING ORGANIZER</h2>
 			<div class="row justify-content-center text-center">
-				<div class="col-10 col-md-4">
+				<div class="col-10 col-md-6">
 					<div class="feature">
 						<a href="galeri.php"><img src="img/cgaleri.png" width="250" height="250"></a>
 						<h3>GALERI</h3>
@@ -41,20 +47,20 @@
 					</div>
 
 				</div>
-				<div class="col-10 col-md-4">
+				<div class="col-10 col-md-6">
 					<div class="feature">
 						<a href="paket.php"><img src="img/cpaket.png" width="250" height="250"></a>
 						<h3>PAKET</h3>
 						<p>Pilih paket wedding sesuai dengan keinginan anda.</p>
 					</div>
 				</div>
-				<div class="col-10 col-md-4">
+				<!-- <div class="col-10 col-md-4">
 					<div class="feature">
 						<a href="testimoni.php"><img src="img/ctesti.png" width="250" height="250"></a>
 						<h3>TESTIMONI</h3>
 						<p>Lihat testimoni dari pelanggan kami disini.</p>
 					</div>
-				</div>
+				</div> -->
 			</div>
 			<!--- End Row -->
 		</div>
@@ -68,7 +74,7 @@
 			<div class="col-lg-6">
 				<h3 class="pb-4">Cintya Wedding Organizer</h3>
 				<p>Cintya wedding organizer merupakan salah satu upaya dalam membantu menyiapkan pesta pernikahan yang masih menggunakan pengelolaan secara manual mulai dari administrasi, pengelolaan data pemesanan, dan metode pembayaran. Proses manual tersebut sangat menyita waktu baik pengguna maupun pemilik Cintya Wedding Organizer seperti proses pemesanan yang pemesan diharuskan datang ke tempat untuk memilih paket yang akan dipilih.</p>
-				<a class="btn btn-purple btn-lg" href="">Pesan Sekarang</a>
+				<a class="btn btn-purple btn-lg" href="paket.php">Pesan Sekarang</a>
 			</div>
 			<div class="col-lg-6"><img class="img-fluid" src="img/4.jpg"></div>
 		</div>
