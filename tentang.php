@@ -23,7 +23,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("img/bg1.jpg");
+    background: url("img/bgbg.png");
     background-size: cover;
     }
 </style>

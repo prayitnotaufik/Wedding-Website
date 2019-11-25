@@ -33,7 +33,7 @@
                     <tbody>
                         <?php
                         @$id_user = $_SESSION["id"];
-                        $query = "SELECT * FROM pemesanan WHERE user_id = '$id_user' ";
+                        $query = "SELECT * FROM pemesanan";
                         $result = mysqli_query($con, $query);
 
                         $query2 = "SELECT * FROM paket INNER JOIN pemesanan ON (paket.id_paket=pemesanan.id_paket)";
