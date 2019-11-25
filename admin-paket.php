@@ -41,7 +41,7 @@
                                     <td><?php echo $row["harga"] ?></td>
                                     <td>
                                         <a href="#modal" class="btn btn-primary" data-toggle="modal" aria-pressed="false" data-target="#modal<?php echo $row["id_paket"] ?>" role="button">Detail</a>
-                                        <a role="button" class="btn btn-success" href="edit-paket.php?id=<?php echo $row["id_paket"] ?> ">Edit</a>
+                                        <a role="button" class="btn btn-warning" href="edit-paket.php?id=<?php echo $row["id_paket"] ?> ">Edit</a>
                                         <a role="button" class="btn btn-danger" href="proses/proses_delete-paket.php?id=<?php echo $row["id_paket"] ?> ">Delete</a>
                                     </td>
                                     <!-- MODAL -->
