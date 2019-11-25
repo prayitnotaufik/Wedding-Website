@@ -22,6 +22,7 @@
                         <tr class="">
                             <th scope="col">#</th>
                             <th scope="col">Gambar</th>
+                            <th scope="col">Kategori</th>
                             <th scope="col">Action</th>
 
                         </tr>
@@ -38,6 +39,21 @@
                                 <tr class="">
                                     <td> <?php echo $no ?> </td>
                                     <td> <img src="galeri/<?php echo $row["file_gambar"] ?>" alt="foto" width="100px">
+                                    </td>
+                                    <td>
+                                        <?php
+                                        switch ($row['kategori']) {
+                                            case 1:
+                                                echo "Dekorasi Pelaminan";
+                                                break;
+                                            case 2:
+                                                echo "Gaun Pengantin";
+                                                break;
+                                            case 3:
+                                                echo "Prosesi";
+                                            break;
+                                        }
+                                        ?>
                                     </td>
                                     <td>
                                         <a role="button" class="btn btn-danger" href="proses/proses_delete-galeri.php?id=<?php echo $row["id_gambar"] ?> ">Delete</a>
@@ -64,9 +80,9 @@
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-body">
-                            <center>
-                                <h4 class="media-heading">Upload Gambar</h4>
-                            </center>
+                            
+                                <h4 class="media-heading text-center">Upload Gambar</h4>
+                            
                             <hr>
                         </div>
                         <div class="row">
@@ -77,6 +93,14 @@
                                         <div class="form-group">
                                             <label for="my-input">Gambar Galeri</label>
                                             <input type="file" name="file" for="file" class="form-control" required>
+                                        </div>
+                                        <div class="form-group">
+                                        <label for="selectkategori">Kategori</label>
+                                        <select class="form-control" name="kategori" id="selectkategori">
+                                            <option value="1">Dekorasi Pelaminan</option>
+                                            <option value="2">Gaun Pengantin</option>
+                                            <option value="3">Prosesi</option>
+                                        </select>
                                         </div>
                                         <div>
                                             <button type="submit" class="btn btn-block btn-outline-primary">Submit</button>

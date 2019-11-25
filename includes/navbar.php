@@ -29,12 +29,6 @@ $item = mysqli_fetch_assoc($hasil);
 							<a class="nav-link" href="galeri.php">Galeri</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">
-							<a class="nav-link" href="paket.php">Paket</a>
-						</li>
-						<li class="nav-item" style="margin-right:20px">
-							<a class="nav-link" href="status2.php">Pemesanan</a>
-						</li>
-						<li class="nav-item" style="margin-right:20px">
 							<a class="nav-link" href="admin-paket.php">Admin</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">

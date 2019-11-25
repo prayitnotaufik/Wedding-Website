@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 05:45 AM
+-- Generation Time: Nov 25, 2019 at 05:44 PM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 7.2.10
 
@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `galeri2` (
   `id_gambar` int(100) NOT NULL,
+  `kategori` int(11) NOT NULL,
   `file_gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -37,11 +38,13 @@ CREATE TABLE `galeri2` (
 -- Dumping data for table `galeri2`
 --
 
-INSERT INTO `galeri2` (`id_gambar`, `file_gambar`) VALUES
-(2, 'gal1.png'),
-(3, 'gal2.png'),
-(4, 'gal3.png'),
-(5, 'gal8.png');
+INSERT INTO `galeri2` (`id_gambar`, `kategori`, `file_gambar`) VALUES
+(11, 1, 'gal1.png'),
+(12, 3, '4.jpg'),
+(13, 3, '2.jpg'),
+(14, 1, 'gal2.png'),
+(15, 1, 'gal3.png'),
+(16, 2, '3.jpg');
 
 -- --------------------------------------------------------
 
@@ -52,12 +55,13 @@ INSERT INTO `galeri2` (`id_gambar`, `file_gambar`) VALUES
 CREATE TABLE `paket` (
   `id_paket` int(11) NOT NULL,
   `nama_paket` varchar(45) DEFAULT NULL,
-  `harga` varchar(45) DEFAULT NULL,
+  `harga` longtext,
   `dekorasi` varchar(255) DEFAULT NULL,
   `rias_baju` varchar(255) DEFAULT NULL,
   `dokumentasi` varchar(255) DEFAULT NULL,
   `mc` varchar(45) DEFAULT NULL,
   `free` varchar(255) DEFAULT NULL,
+  `biaya_pelihara` longtext NOT NULL,
   `foto` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -65,9 +69,8 @@ CREATE TABLE `paket` (
 -- Dumping data for table `paket`
 --
 
-INSERT INTO `paket` (`id_paket`, `nama_paket`, `harga`, `dekorasi`, `rias_baju`, `dokumentasi`, `mc`, `free`, `foto`) VALUES
-(11, 'test', '12.000.000', 'test', 'asdasd', '', '', '', 'image6.jpg'),
-(12, 'Bougenville', '10.000.000', 'Panggung dan Emboh', 'pengantin, keluarga', 'test', '1 Laki, 1 Perempuan', 'sdasda', 'image4.jpg');
+INSERT INTO `paket` (`id_paket`, `nama_paket`, `harga`, `dekorasi`, `rias_baju`, `dokumentasi`, `mc`, `free`, `biaya_pelihara`, `foto`) VALUES
+(18, 'Tulip', '17000000', 'Pelaminan, Taman, Lorong, Kamar Pengantin', 'Pengantin, Besan, Among Tamu, Kembar Mayang', 'Foto, Video', 'Resepsi, Akad', 'SPA, Facial', '5000', 'gal5.png');
 
 -- --------------------------------------------------------
 
@@ -86,20 +89,6 @@ CREATE TABLE `pemesanan` (
   `bukti_pembayaran` varchar(255) DEFAULT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pemesanan`
---
-
-INSERT INTO `pemesanan` (`id_pemesanan`, `catatan`, `id_paket`, `tgl_pesan`, `tgl_kembali`, `status`, `lokasi`, `bukti_pembayaran`, `user_id`) VALUES
-(8, 'sdfsdfsdfsdfsdf', 11, '2011-08-19', '2011-08-19', 'Waiting', 'sdsdf', 'image1.jpg', 3),
-(9, 'dsfsdfsdf', 11, '2011-08-19', '2011-08-19', 'Waiting', 'sdfsdf', 'image5.jpg', 3),
-(10, 'sdcsdcdacvfdvsdvsdv', 11, '2011-08-19', '2011-08-19', 'Waiting', 'ascsdc', NULL, 3),
-(11, 'asdasdasc', 11, '2019-11-24', '2019-11-25', 'Waiting', 'Gedung Aula Pertamina', NULL, 4),
-(12, 'asxascasadasd', 12, '2019-11-24', '2019-11-27', 'Waiting', 'sdsdf', NULL, 3),
-(13, '', 12, '2019-11-27', '2011-08-29', 'Waiting', 'Malang', NULL, 3),
-(14, 'Saya pesan', 12, '2019-11-25', '2019-11-30', 'Waiting', 'Gedung Pertamina Polinema', NULL, 2),
-(15, 'Saya Pesan Dong', 11, '2019-11-26', '2019-11-28', 'Waiting', 'Gedung Balai Malang', 'api-vector-png.png', 5);
 
 -- --------------------------------------------------------
 
@@ -123,10 +112,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_user`, `type`, `username`, `password`, `nama`, `alamat`, `no_telp`, `email`) VALUES
-(2, 'customer', 'test', 'test', 'test', 'testinng', '232323', 'test@gmail.com'),
 (3, 'admin', 'admin', 'admin', 'admin', NULL, NULL, NULL),
-(4, 'customer', 'taufik', '1234', 'Taufik', 'Jalan jalan', '089928812992', 'taufikprayitno16@gmail.com'),
-(5, 'customer', 'denatan', 'denatan', 'denatan', 'Malang', '085236201517', 'denatan@gmail.com');
+(6, 'customer', 'user', 'user', 'User', 'Malang', '085123456789', 'user@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -166,13 +153,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `galeri2`
 --
 ALTER TABLE `galeri2`
-  MODIFY `id_gambar` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_gambar` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `pemesanan`
@@ -184,7 +171,7 @@ ALTER TABLE `pemesanan`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables

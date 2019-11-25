@@ -10,6 +10,7 @@
     $dokumentasi = $_POST["dokumentasi"];
     $mc = $_POST["mc"];
     $free = $_POST["free"];
+    $biaya = $_POST["biaya"];
     $code = $_FILES['file']['error'];
     if ($code === 0) {     
 
@@ -40,7 +41,7 @@
 
         if(move_uploaded_file($tmp, $path)) {
 
-            $sql = "UPDATE paket SET nama_paket ='$nama',harga ='$harga',dekorasi ='$dekorasi',rias_baju ='$rias_baju',dokumentasi ='$dokumentasi',mc ='$mc',free ='$free',foto='$nama_file' WHERE id_paket = '$id'";
+            $sql = "UPDATE paket SET nama_paket ='$nama',harga ='$harga',dekorasi ='$dekorasi',rias_baju ='$rias_baju',dokumentasi ='$dokumentasi',mc ='$mc',free ='$free',biaya_pelihara ='$biaya',foto='$nama_file' WHERE id_paket = '$id'";
 
             if (mysqli_query($con, $sql)) {
                 header("Location:../admin-paket.php");

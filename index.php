@@ -7,10 +7,10 @@
 	<?php include 'includes/navbar.php' ?>
 	<!--- Image Slider -->
 	<div class="carousel slide" data-ride="carousel" data-interval="5000">
-		<ol class="carousel-indicators">
-		<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+			<ol class="carousel-indicators">
+			<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+			<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active"><img src="img/slider1.png"></div>
@@ -42,7 +42,7 @@
 	<!--- Start Jumbotron -->
 	<div class="jumbotron">
 		<div class="container">
-			<h2 class="text-center pt-5 pb-3">CINTYA WEDDING ORGANIZER</h2>
+			<h2 class="text-center pt-5 pb-3 comforta">CINTYA WEDDING ORGANIZER</h2>
 			<div class="row justify-content-center text-center">
 				<div class="col-10 col-md-6">
 					<div class="feature">
@@ -77,9 +77,9 @@
 	<div class="container py-3">
 		<div class="row justify-content-center py-5">
 			<div class="col-lg-6">
-				<h3 class="pb-4">Cintya Wedding Organizer</h3>
+				<h3 class="pb-4 comforta">Cintya Wedding Organizer</h3>
 				<p>Cintya wedding organizer merupakan salah satu upaya dalam membantu menyiapkan pesta pernikahan yang masih menggunakan pengelolaan secara manual mulai dari administrasi, pengelolaan data pemesanan, dan metode pembayaran. Proses manual tersebut sangat menyita waktu baik pengguna maupun pemilik Cintya Wedding Organizer seperti proses pemesanan yang pemesan diharuskan datang ke tempat untuk memilih paket yang akan dipilih.</p>
-				<a class="btn btn-purple btn-lg" href="paket.php">Pesan Sekarang</a>
+				<a class="btn btn-purple btn-lg" style="margin-left:0%" href="paket.php">Pesan Sekarang</a>
 			</div>
 			<div class="col-lg-6"><img class="img-fluid" src="img/4.jpg"></div>
 		</div>

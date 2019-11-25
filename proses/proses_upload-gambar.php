@@ -3,6 +3,7 @@
     include('../config/connection.php');
     
     $code = $_FILES['file']['error'];
+    $kategori = $_POST['kategori'];
     if ($code === 0) {     
 
         $destination_path = getcwd();
@@ -32,7 +33,7 @@
 
         if(move_uploaded_file($tmp, $path)) {
 
-            $sql = "INSERT INTO galeri2 (file_gambar) VALUES ('$nama_file')";
+            $sql = "INSERT INTO galeri2 (file_gambar, kategori) VALUES ('$nama_file', $kategori)";
 
             if (mysqli_query($con, $sql)) {
                 header("Location:../admin-galeri.php");

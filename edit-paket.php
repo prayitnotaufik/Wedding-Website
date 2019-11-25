@@ -71,7 +71,13 @@ $row = mysqli_fetch_assoc($result);
                                 <input id="my-input" class="form-control" type="text" name="free" value="<?php echo $row["free"] ?>">
                             </div>
                         </div>
-                        <div class="col-md-12">
+                        <div class="col-md-5">
+                            <div class="form-group">
+                                <label for="my-input">Biaya Peliharaan</label>
+                                <input id="my-input" class="form-control" type="number" name="biaya" >
+                            </div>
+                        </div>
+                        <div class="col-md-7">
                             <div class="form-group">
                                 <label for="my-input">Foto</label>
                                 <input type="file" name="file" for="file" class="form-control" required>

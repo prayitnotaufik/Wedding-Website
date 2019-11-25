@@ -18,17 +18,32 @@ $pemesanan = mysqli_fetch_assoc($result2);
 
 <body>
     <?php include 'includes/navbar.php' ?>
-    <div class="container mt-5 pt-5 " style="min-height:720px">
+    <div class="container mt-5 pt-5 mb-5">
         <div class="row">
-            <div class="col-md-7 border border-primary">
+            <div class="col-md-7">
                 <div class="row">
-                    <h4><?php echo $row["nama_paket"] ?></h4>
+                    <div class="col">
+                        <h1><?php echo $row["nama_paket"] ?></h1>
+                    </div>
                 </div>
                 <div class="row">
-                    <img style="max-width:600px" src="foto/<?php echo $row["foto"] ?>" alt="" srcset="">
+                    <div class="col">
+                        <img style="max-width:500px" src="foto/<?php echo $row["foto"] ?>" alt="" srcset="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                    <br><h3 style="color:purple">Harga : Rp.<?php echo $row["harga"]?>,-</h3>
+                    <p>Dekorasi : <?php echo $row["dekorasi"]?></p>
+                    <p>Rias & Baju : <?php echo $row["rias_baju"]?></p>
+                    <p>Dokumentasi : <?php echo $row["dokumentasi"]?></p>
+                    <p>MC : <?php echo $row["mc"]?></p>
+                    <p>Free : <?php echo $row["free"]?></p>
+                    <p>Biaya Pemeliharaan : Rp.<?php echo $row["biaya_pelihara"]?>,-/Hari</p>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-5 border border-primary">
+            <div class="col-md-5 bg-ungu rounded">
                 <form action="proses/proses_pemesanan.php" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="id_user" value="<?php echo $id_user ?>">
                     <input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
@@ -74,6 +89,7 @@ $pemesanan = mysqli_fetch_assoc($result2);
                         </div>
                         <div class="col-sm-12">
                             <button type="submit" class="btn btn-block btn-primary">Pesan</button>
+                            <button type="reset" class="btn btn-block btn-danger">Reset</button>
                         </div>
                     </div>
                     <div class="form-group row">

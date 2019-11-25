@@ -53,38 +53,38 @@
                     ?>
                     <div class="col-lg-4 col-md-6">
                     <!--Panel-->
-                    <div class="card kartu rounded">
-                        <h3 class="card-header text-uppercase font-weight-bold text-center py-5" style="background-color: rgba(0, 0, 0, 0.37)"> <?php echo $row["nama_paket"] ?></h3>
-                        <div class="card-body rounded-bottom" style="background-color: grey">
+                    <div class="card">
+                        <h5 class="text-uppercase font-weight-bold text-center pt-4 text-white"> <span class="bg-ungu1 py-2 px-3 rounded"><?php echo $row["nama_paket"] ?></span> </h5>
+                        <div class="card-body">
+                            <h5 class="text-center font-weight-bold mb-3">Rp.<?php echo $row["harga"] ?>,-</h5>
                             <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Dekorasi
-                                <span class="badge badge-success badge-pill"><?php echo $HitungDekorasi ?></span>
+                                <span class="badge badge-ungu badge-pill"><?php echo $HitungDekorasi ?></span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Rias Baju
-                                <span class="badge badge-success badge-pill"><?php echo $HitungRias ?></span>
+                                <span class="badge badge-ungu badge-pill"><?php echo $HitungRias ?></span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Dokumentasi
-                                <span class="badge badge-success badge-pill"><?php echo $HitungDokumentasi ?></span>
+                                <span class="badge badge-ungu badge-pill"><?php echo $HitungDokumentasi ?></span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Pembawa Acara
-                                <span class="badge badge-success badge-pill"><?php echo $HitungMc ?></span>
+                                <span class="badge badge-ungu badge-pill"><?php echo $HitungMc ?></span>
                             </li>
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Free
-                                <span class="badge badge-success badge-pill"><?php echo $HitungFree ?></span>
+                                <span class="badge badge-ungu badge-pill"><?php echo $HitungFree ?></span>
                             </li>
                             </ul>
-                            <div class="mt-2">
-                                <button type="button" class="btn btn-block btn-secondary" disabled>Rp.<?php echo $row["harga"] ?>,-</button>
+                            <div class="mt-3">
                                 <?php
                                     if (isset($username)) {?>
-                                        <a href="pemesanan.php?id_paket=<?php echo $id_paket ?>&id_user=<?php echo $item["id_user"] ?>" class="btn btn-block btn-info">DETAIL & PESAN</a>
+                                        <a href="pemesanan.php?id_paket=<?php echo $id_paket ?>&id_user=<?php echo $item["id_user"] ?>" class="btn btn-block btn-ungu">DETAIL & PESAN</a>
                                     <?php }else {?>
-                                        <a href="login.php" class="btn btn-block btn-info">DETAIL & PESAN</a>
+                                        <a href="login.php" class="btn btn-block btn-ungu">DETAIL & PESAN</a>
                                     <?php } ?>
                             </div> 
                         </div>
