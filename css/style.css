@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Sacramento&display=swap');
 
 body {
   overflow-x: hidden;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Varela Round', sans-serif;
   color: #505962;
+}
+.comforta {
+  font-family: 'Comfortaa', cursive !important;
+}
+.sacramento {
+  font-family: 'Sacramento', cursive;
 }
 
 .carousel-inner img {

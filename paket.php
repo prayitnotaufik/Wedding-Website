@@ -3,6 +3,16 @@
 <html>
 <?php include 'includes/head.php'?>
 <body>
+<style>
+    body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("img/bgbg.png");
+    background-size: cover;
+    }
+</style>
 <?php include 'includes/navbar.php' ?>
     <div class="container">
         <div class="heading py-5 mt-5">
@@ -43,9 +53,9 @@
                     ?>
                     <div class="col-lg-4 col-md-6">
                     <!--Panel-->
-                    <div class="card kartu">
-                        <h3 class="card-header light-blue lighten-1 white-text text-uppercase font-weight-bold text-center py-5"> <?php echo $row["nama_paket"] ?></h3>
-                        <div class="card-body">
+                    <div class="card kartu rounded">
+                        <h3 class="card-header text-uppercase font-weight-bold text-center py-5" style="background-color: rgba(0, 0, 0, 0.37)"> <?php echo $row["nama_paket"] ?></h3>
+                        <div class="card-body rounded-bottom" style="background-color: grey">
                             <ul class="list-group">
                             <li class="list-group-item d-flex justify-content-between align-items-center">
                                 Dekorasi
@@ -74,7 +84,7 @@
                                     if (isset($username)) {?>
                                         <a href="pemesanan.php?id_paket=<?php echo $id_paket ?>&id_user=<?php echo $item["id_user"] ?>" class="btn btn-block btn-info">DETAIL & PESAN</a>
                                     <?php }else {?>
-                                        <button type="button" class="btn btn-block btn-secondary" disabled>Login Untuk Detail & Pesan</button>
+                                        <a href="login.php" class="btn btn-block btn-info">DETAIL & PESAN</a>
                                     <?php } ?>
                             </div> 
                         </div>
