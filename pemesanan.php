@@ -8,11 +8,11 @@ $query = "SELECT * FROM paket WHERE id_paket = $id_paket";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 
-$query2 = "SELECT * FROM pemesanan";
+$dateNow = date("Y-m-d");
+$query2 = "SELECT * FROM pemesanan WHERE tgl_kembali > '$dateNow'";
 $result2 = mysqli_query($con, $query2);
 $pemesanan = mysqli_fetch_assoc($result2);
 
-$dateNow = new DateTime();
 ?>
 <?php include 'includes/head.php' ?>
 
