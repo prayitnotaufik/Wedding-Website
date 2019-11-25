@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 02:52 AM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.3.9
+-- Generation Time: Nov 25, 2019 at 05:45 AM
+-- Server version: 10.1.36-MariaDB
+-- PHP Version: 7.2.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -40,7 +40,8 @@ CREATE TABLE `galeri2` (
 INSERT INTO `galeri2` (`id_gambar`, `file_gambar`) VALUES
 (2, 'gal1.png'),
 (3, 'gal2.png'),
-(4, 'gal3.png');
+(4, 'gal3.png'),
+(5, 'gal8.png');
 
 -- --------------------------------------------------------
 
@@ -95,7 +96,10 @@ INSERT INTO `pemesanan` (`id_pemesanan`, `catatan`, `id_paket`, `tgl_pesan`, `tg
 (9, 'dsfsdfsdf', 11, '2011-08-19', '2011-08-19', 'Waiting', 'sdfsdf', 'image5.jpg', 3),
 (10, 'sdcsdcdacvfdvsdvsdv', 11, '2011-08-19', '2011-08-19', 'Waiting', 'ascsdc', NULL, 3),
 (11, 'asdasdasc', 11, '2019-11-24', '2019-11-25', 'Waiting', 'Gedung Aula Pertamina', NULL, 4),
-(12, 'asxascasadasd', 12, '2019-11-24', '2019-11-27', 'Waiting', 'sdsdf', NULL, 3);
+(12, 'asxascasadasd', 12, '2019-11-24', '2019-11-27', 'Waiting', 'sdsdf', NULL, 3),
+(13, '', 12, '2019-11-27', '2011-08-29', 'Waiting', 'Malang', NULL, 3),
+(14, 'Saya pesan', 12, '2019-11-25', '2019-11-30', 'Waiting', 'Gedung Pertamina Polinema', NULL, 2),
+(15, 'Saya Pesan Dong', 11, '2019-11-26', '2019-11-28', 'Waiting', 'Gedung Balai Malang', 'api-vector-png.png', 5);
 
 -- --------------------------------------------------------
 
@@ -121,7 +125,8 @@ CREATE TABLE `user` (
 INSERT INTO `user` (`id_user`, `type`, `username`, `password`, `nama`, `alamat`, `no_telp`, `email`) VALUES
 (2, 'customer', 'test', 'test', 'test', 'testinng', '232323', 'test@gmail.com'),
 (3, 'admin', 'admin', 'admin', 'admin', NULL, NULL, NULL),
-(4, 'customer', 'taufik', '1234', 'Taufik', 'Jalan jalan', '089928812992', 'taufikprayitno16@gmail.com');
+(4, 'customer', 'taufik', '1234', 'Taufik', 'Jalan jalan', '089928812992', 'taufikprayitno16@gmail.com'),
+(5, 'customer', 'denatan', 'denatan', 'denatan', 'Malang', '085236201517', 'denatan@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -161,7 +166,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `galeri2`
 --
 ALTER TABLE `galeri2`
-  MODIFY `id_gambar` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_gambar` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `paket`
@@ -173,13 +178,13 @@ ALTER TABLE `paket`
 -- AUTO_INCREMENT for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_pemesanan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- Constraints for dumped tables
