@@ -21,7 +21,7 @@
                     $_SESSION["username"] = $username;
                     $_SESSION["type"] = $row["type"];
                     $_SESSION["id"] = $row["id_user"];
-                    header("Location: ../admin.php");
+                    header("Location: ../admin-paket.php");
                 } else {
                     $_SESSION["username"] = $username;
                     $_SESSION["type"] = $row["type"];

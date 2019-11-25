@@ -8,6 +8,7 @@
     <div class="container mt-5 pt-5 " style="min-height:720px">
         <div class="container-fluid mt-3">
             <h1 class="">Data Pesanan</h1>
+            <p>Catatan : Jika sudah mengupload bukti pembayaran silahkan hubungi contact person untuk kelanjutan pesanan</p>
         </div>
         <div class="container">
             <table class="table table-striped table-bordered">
