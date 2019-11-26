@@ -9,9 +9,9 @@ $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 
 $dateNow = date("Y-m-d");
-$query2 = "SELECT * FROM pemesanan WHERE tgl_kembali > '$dateNow'";
+$query2 = "SELECT * FROM pemesanan WHERE tgl_kembali > $dateNow";
 $result2 = mysqli_query($con, $query2);
-$pemesanan = mysqli_fetch_assoc($result2);
+// $pemesanan = mysqli_fetch_assoc($result2);
 
 ?>
 <?php include 'includes/head.php' ?>
@@ -33,13 +33,14 @@ $pemesanan = mysqli_fetch_assoc($result2);
                 </div>
                 <div class="row">
                     <div class="col">
-                    <br><h3 style="color:purple">Harga : Rp.<?php echo $row["harga"]?>,-</h3>
-                    <p>Dekorasi : <?php echo $row["dekorasi"]?></p>
-                    <p>Rias & Baju : <?php echo $row["rias_baju"]?></p>
-                    <p>Dokumentasi : <?php echo $row["dokumentasi"]?></p>
-                    <p>MC : <?php echo $row["mc"]?></p>
-                    <p>Free : <?php echo $row["free"]?></p>
-                    <p>Biaya Pemeliharaan : Rp.<?php echo $row["biaya_pelihara"]?>,-/Hari</p>
+                        <br>
+                        <h3 style="color:purple">Harga : Rp.<?php echo $row["harga"] ?>,-</h3>
+                        <p>Dekorasi : <?php echo $row["dekorasi"] ?></p>
+                        <p>Rias & Baju : <?php echo $row["rias_baju"] ?></p>
+                        <p>Dokumentasi : <?php echo $row["dokumentasi"] ?></p>
+                        <p>MC : <?php echo $row["mc"] ?></p>
+                        <p>Free : <?php echo $row["free"] ?></p>
+                        <p>Biaya Pemeliharaan : Rp.<?php echo $row["biaya_pelihara"] ?>,-/Hari</p>
                     </div>
                 </div>
             </div>
@@ -48,9 +49,9 @@ $pemesanan = mysqli_fetch_assoc($result2);
                     <input type="hidden" name="id_user" value="<?php echo $id_user ?>">
                     <input type="hidden" name="id_paket" value="<?php echo $id_paket ?>">
                     <div>
-                        <h4 class="text-center">Rincian Pemesanan</h4>
+                        <h4 class="text-center">Tanggal yang sudah dipesan</h4>
 
-                        <h6>Tanggal yang sudah dipesan :</h6>
+                        <!-- <h6>Tanggal yang sudah dipesan :</h6> -->
                         <?php
                         if (mysqli_num_rows($result2) > 0) {
                             while ($pemesanan = mysqli_fetch_assoc($result2)) { ?>
@@ -64,9 +65,8 @@ $pemesanan = mysqli_fetch_assoc($result2);
                                         <input class="form-control" type="date" value="<?php echo $pemesanan["tgl_kembali"] ?>" id="tanngal" name="tanggal_kembali" disabled>
                                     </div>
                                 </div>
-                        <?php }
-                        }
-                        ?>
+                            <?php }
+                        }?>
                     </div>
                     <hr>
                     <h4 class="text-center">Pesanan Anda</h4>
