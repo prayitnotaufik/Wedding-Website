@@ -28,11 +28,11 @@
 		<div class="container">
 			<div class="row justify-content-center text-center">
 				<div class="col-5">
-				<iframe class="embed-responsive-item"
-				src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen>
+				<iframe class="embed-responsive-item" style="margin-top:10px" width="560" height="315" src="https://www.youtube.com/embed/ZrB83XtL0qA?autoplay=1"
+				frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
 				</iframe>
 				</div>
-				<div class="col-5" style="margin-top : 40px; margin-left:40px">
+				<div class="col-5" style="margin-top : 40px; margin-left:140px">
 					<h2>Login atau Register</h2>
 					<p class="lead">Login terlebih dahulu untuk melakukan pemesanan. Register dahulu jika belum mempunyai akun</p>
 					<a class="btn btn-purple btn-lg" href="login.php" target="_blank">Login</a>
