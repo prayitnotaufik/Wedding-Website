@@ -33,17 +33,26 @@
                     $query2 = "SELECT * FROM paket INNER JOIN pemesanan ON (paket.id_paket=pemesanan.id_paket)";
                     $result2 = mysqli_query($con, $query2);
                     $paket = mysqli_fetch_assoc($result2);
+                    
                     if (mysqli_num_rows($result) > 0) {
                         $no = 0;
                         while ($row = mysqli_fetch_assoc($result)) {
-                            $no++; ?>
+                            $no++; 
+                            // $tanggal = date_diff($row["tgl_kembali"],$row["tgl_pesan"]);
+                            $tanggal1 = strtotime($row["tgl_pesan"]);
+                            $tanggal2 = strtotime($row["tgl_kembali"]);
+                            $dif = $tanggal2-$tanggal1;
+                            $hasil = round($dif/86400);
+                            $jumlah = $paket["harga"] + ($hasil*$paket["biaya_pelihara"]);
+                            ?>
+                            
                             <tr>
                                 <td><?php echo $no ?></td>
                                 <td><?php echo $row["tgl_pesan"] ?></td>
                                 <td><?php echo $row["tgl_kembali"] ?></td>
                                 <td><?php echo $row["lokasi"] ?></td>
                                 <td><?php echo $row["catatan"] ?></td>
-                                <td><?php echo $paket["harga"] ?></td>
+                                <td>Rp.<?php echo $jumlah ?>,-</td>
                                 <td>
                                     <?php
                                             if ($row["bukti_pembayaran"] != null) { ?>

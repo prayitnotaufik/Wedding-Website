@@ -15,6 +15,7 @@
         <div style="background-color:#E3EDEA;" id="page-content-wrapper">
             <div class="container-fluid mt-3">
                 <h1 class="">Data Pemesanan</h1>
+                <p style="color:red"><?php echo @$_GET["error"] ?></p>
             </div>
             <div class="container">
                 <table class="table table-striped table-bordered" style="background-color: white">
@@ -42,14 +43,20 @@
                         if (mysqli_num_rows($result) > 0) {
                             $no = 0;
                             while ($row = mysqli_fetch_assoc($result)) {
-                                $no++; ?>
+                                $no++;
+                                $tanggal1 = strtotime($row["tgl_pesan"]);
+                                $tanggal2 = strtotime($row["tgl_kembali"]);
+                                $dif = $tanggal2 - $tanggal1;
+                                $hasil = round($dif / 86400);
+                                $jumlah = $paket["harga"] + ($hasil * $paket["biaya_pelihara"]);
+                                ?>
                                 <tr>
                                     <td><?php echo $no ?></td>
                                     <td><?php echo $row["tgl_pesan"] ?></td>
                                     <td><?php echo $row["tgl_kembali"] ?></td>
                                     <td><?php echo $row["lokasi"] ?></td>
                                     <td><?php echo $row["catatan"] ?></td>
-                                    <td><?php echo $paket["harga"] ?></td>
+                                    <td><?php echo $jumlah ?></td>
                                     <td>
                                         <?php
                                                 if ($row["bukti_pembayaran"] == null) { ?>
@@ -91,9 +98,9 @@
                                         <?php } ?>
                                     </td>
                                     <td>
-                                        <?php echo $row["status"] ?>
+                                        <button class="btn btn-block btn-outline-primary" disabled><?php echo $row["status"] ?></button>
                                         <br>
-                                        selesai
+                                        <a href="proses/proses_terima-pesanan.php?id=<?php echo $row["id_pemesanan"] ?>" class="btn btn-block btn-outline-primary">Accept</a>
                                     </td>
                                 </tr>
                             <?php } ?>
