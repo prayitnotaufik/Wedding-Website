@@ -27,7 +27,12 @@
 		<!--- BOOTSTRAP UDEMY COURSE -->
 		<div class="container">
 			<div class="row justify-content-center text-center">
-				<div class="col-10 py-5">
+				<div class="col-5">
+				<iframe class="embed-responsive-item"
+				src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen>
+				</iframe>
+				</div>
+				<div class="col-5" style="margin-top : 40px; margin-left:40px">
 					<h2>Login atau Register</h2>
 					<p class="lead">Login terlebih dahulu untuk melakukan pemesanan. Register dahulu jika belum mempunyai akun</p>
 					<a class="btn btn-purple btn-lg" href="login.php" target="_blank">Login</a>
@@ -42,7 +47,7 @@
 	<!--- Start Jumbotron -->
 	<div class="jumbotron">
 		<div class="container">
-			<h2 class="text-center pt-5 pb-3 comforta">CINTYA WEDDING ORGANIZER</h2>
+			<h2 class="text-center pt-5 pb-3 comforta">Yuk! Lihat Lebih Lanjut</h2>
 			<div class="row justify-content-center text-center">
 				<div class="col-10 col-md-6">
 					<div class="feature">
@@ -59,13 +64,6 @@
 						<p>Pilih paket wedding sesuai dengan keinginan anda.</p>
 					</div>
 				</div>
-				<!-- <div class="col-10 col-md-4">
-					<div class="feature">
-						<a href="testimoni.php"><img src="img/ctesti.png" width="250" height="250"></a>
-						<h3>TESTIMONI</h3>
-						<p>Lihat testimoni dari pelanggan kami disini.</p>
-					</div>
-				</div> -->
 			</div>
 			<!--- End Row -->
 		</div>
@@ -74,6 +72,7 @@
 	<!--- End Jumbotron -->
 
 	<!--- Two Column Section -->
+	
 	<div class="container py-3">
 		<div class="row justify-content-center py-5">
 			<div class="col-lg-6">
