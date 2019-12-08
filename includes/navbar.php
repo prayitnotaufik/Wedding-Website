@@ -1,6 +1,7 @@
 <?php
 include 'config/connection.php';
 session_start();
+
 @$username = $_SESSION["username"];
 @$type = $_SESSION["type"];
 
@@ -26,6 +27,9 @@ $item = mysqli_fetch_assoc($hasil);
 							<a class="nav-link" href="tentang.php">Tentang</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="testimoni.php">Testimoni</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
 							<a class="nav-link" href="galeri.php">Galeri</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">
@@ -40,6 +44,9 @@ $item = mysqli_fetch_assoc($hasil);
 						</li>
 						<li class="nav-item" style="margin-right:20px">
 							<a class="nav-link" href="tentang.php">Tentang</a>
+						</li>
+						<li class="nav-item" style="margin-right:20px">
+							<a class="nav-link" href="testimoni.php">Testimoni</a>
 						</li>
 						<li class="nav-item" style="margin-right:20px">
 							<a class="nav-link" href="galeri.php">Galeri</a>
@@ -60,6 +67,9 @@ $item = mysqli_fetch_assoc($hasil);
 					</li>
 					<li class="nav-item" style="margin-right:20px">
 						<a class="nav-link" id="tentang" href="tentang.php">Tentang</a>
+					</li>
+					<li class="nav-item" style="margin-right:20px">
+						<a class="nav-link" href="testimoni.php">Testimoni</a>
 					</li>
 					<li class="nav-item" style="margin-right:20px">
 						<a class="nav-link" href="galeri.php">Galeri</a>
