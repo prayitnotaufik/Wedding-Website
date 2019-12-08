@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 25, 2019 at 05:44 PM
--- Server version: 10.1.36-MariaDB
--- PHP Version: 7.2.10
+-- Generation Time: Dec 09, 2019 at 12:11 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -55,7 +55,7 @@ INSERT INTO `galeri2` (`id_gambar`, `kategori`, `file_gambar`) VALUES
 CREATE TABLE `paket` (
   `id_paket` int(11) NOT NULL,
   `nama_paket` varchar(45) DEFAULT NULL,
-  `harga` longtext,
+  `harga` longtext DEFAULT NULL,
   `dekorasi` varchar(255) DEFAULT NULL,
   `rias_baju` varchar(255) DEFAULT NULL,
   `dokumentasi` varchar(255) DEFAULT NULL,
@@ -70,7 +70,8 @@ CREATE TABLE `paket` (
 --
 
 INSERT INTO `paket` (`id_paket`, `nama_paket`, `harga`, `dekorasi`, `rias_baju`, `dokumentasi`, `mc`, `free`, `biaya_pelihara`, `foto`) VALUES
-(18, 'Tulip', '17000000', 'Pelaminan, Taman, Lorong, Kamar Pengantin', 'Pengantin, Besan, Among Tamu, Kembar Mayang', 'Foto, Video', 'Resepsi, Akad', 'SPA, Facial', '5000', 'gal5.png');
+(18, 'Tulip', '17000000', 'Pelaminan, Taman, Lorong, Kamar Pengantin', 'Pengantin, Besan, Among Tamu, Kembar Mayang', 'Foto, Video', 'Resepsi, Akad', 'SPA, Facial', '5000', 'gal5.png'),
+(19, 'Bougenville', '1200000', 'Tamana', 'qwda', 'sd', 'asd', 'asd', '9000', 'image9.jpg');
 
 -- --------------------------------------------------------
 
@@ -87,8 +88,20 @@ CREATE TABLE `pemesanan` (
   `status` varchar(255) NOT NULL DEFAULT 'Waiting',
   `lokasi` varchar(255) NOT NULL,
   `bukti_pembayaran` varchar(255) DEFAULT NULL,
+  `testimoni` longtext DEFAULT NULL,
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pemesanan`
+--
+
+INSERT INTO `pemesanan` (`id_pemesanan`, `catatan`, `id_paket`, `tgl_pesan`, `tgl_kembali`, `status`, `lokasi`, `bukti_pembayaran`, `testimoni`, `user_id`) VALUES
+(18, 'dasdasc', 18, '2019-11-26', '2019-11-29', 'Acepted', 'Gedung Aula Pertamina', 'image5.jpg', 'Mainnya Hebat', 6),
+(19, 'dasdasc', 18, '2019-11-26', '2019-11-29', 'Waiting', 'Gedung Aula Pertamina', NULL, NULL, 6),
+(20, 'kajsdkjasda', 18, '2019-11-26', '2019-11-28', 'Waiting', 'Cek ig kita', NULL, NULL, 6),
+(21, 'sfsdfsdf', 19, '2019-12-08', '2019-12-20', 'Waiting', 'Gedung Aula Pertamina', NULL, NULL, 6),
+(22, 'sdsdd', 18, '2011-08-19', '2011-08-21', 'Acepted', 'Gedung Aula Pertamina', 'image7.jpg', 'Tolong lampunya diperbaiki', 8);
 
 -- --------------------------------------------------------
 
@@ -113,7 +126,9 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id_user`, `type`, `username`, `password`, `nama`, `alamat`, `no_telp`, `email`) VALUES
 (3, 'admin', 'admin', 'admin', 'admin', NULL, NULL, NULL),
-(6, 'customer', 'user', 'user', 'User', 'Malang', '085123456789', 'user@gmail.com');
+(6, 'customer', 'user', 'user', 'User', 'Malang', '085123456789', 'user@gmail.com'),
+(7, 'customer', 'dasdasdasd', '123', 'asdas', 'adas', '12312312', 'asdad@gmail.com'),
+(8, 'customer', 'asep', '12345', 'Asep', 'Jl kedungkandang', '089918283122', 'asep@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -159,19 +174,19 @@ ALTER TABLE `galeri2`
 -- AUTO_INCREMENT for table `paket`
 --
 ALTER TABLE `paket`
-  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id_paket` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `pemesanan`
 --
 ALTER TABLE `pemesanan`
-  MODIFY `id_pemesanan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_pemesanan` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- Constraints for dumped tables
