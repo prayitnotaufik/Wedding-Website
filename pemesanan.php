@@ -8,8 +8,12 @@ $query = "SELECT * FROM paket WHERE id_paket = $id_paket";
 $result = mysqli_query($con, $query);
 $row = mysqli_fetch_assoc($result);
 
-$dateNow = date("Y-m-d");
-$query2 = "SELECT * FROM pemesanan WHERE tgl_kembali > $dateNow";
+
+$nz_time = new DateTime(null, new DateTimezone('Asia/Jakarta'));
+// echo $nz_time->format('d-m-Y');
+
+$dateNow = $nz_time->format('d-m-Y');
+$query2 = "SELECT * FROM pemesanan WHERE DATE(tgl_kembali) > DATE(NOW())";
 $result2 = mysqli_query($con, $query2);
 // $pemesanan = mysqli_fetch_assoc($result2);
 
@@ -58,11 +62,11 @@ $result2 = mysqli_query($con, $query2);
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <label for="tanggal">Tanggal Pesan</label>
-                                        <input class="form-control" type="date" value="<?php echo $pemesanan["tgl_pesan"] ?>" id="tanngal" name="tanggal_pesan" disabled>
+                                        <input class="form-control" type="" value="<?php echo date_format(new DateTime($pemesanan["tgl_pesan"]),'d-m-Y')  ?>" id="tanngal" name="tanggal_pesan" disabled>
                                     </div>
                                     <div class="col-sm-6">
                                         <label for="tanggal">Tanggal Selesai</label>
-                                        <input class="form-control" type="date" value="<?php echo $pemesanan["tgl_kembali"] ?>" id="tanngal" name="tanggal_kembali" disabled>
+                                        <input class="form-control" type="" value="<?php echo date_format(new DateTime($pemesanan["tgl_kembali"]),'d-m-Y')  ?>" id="tanngal" name="tanggal_kembali" disabled>
                                     </div>
                                 </div>
                             <?php }

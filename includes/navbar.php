@@ -59,7 +59,7 @@ $item = mysqli_fetch_assoc($hasil);
 						<a class="nav-link" href="index.php">Beranda</a>
 					</li>
 					<li class="nav-item" style="margin-right:20px">
-						<a class="nav-link" href="tentang.php">Tentang</a>
+						<a class="nav-link" id="tentang" href="tentang.php">Tentang</a>
 					</li>
 					<li class="nav-item" style="margin-right:20px">
 						<a class="nav-link" href="galeri.php">Galeri</a>
@@ -68,10 +68,10 @@ $item = mysqli_fetch_assoc($hasil);
 						<a class="nav-link" href="paket.php">Paket</a>
 					</li>
 					<li class="nav-item" style="margin-right:20px">
-						<a class="nav-link" href="register.php">Register</a>
+						<a class="nav-link" id="register" href="register.php">Register</a>
 					</li>
 					<li class="nav-item" style="margin-right:20px">
-						<a class="nav-link" href="login.php">Login</a>
+						<a class="nav-link" id="login" href="login.php">Login</a>
 					</li>
 				<?php } ?>
 			</ul>

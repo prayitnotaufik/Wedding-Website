@@ -48,8 +48,8 @@
                             
                             <tr>
                                 <td><?php echo $no ?></td>
-                                <td><?php echo $row["tgl_pesan"] ?></td>
-                                <td><?php echo $row["tgl_kembali"] ?></td>
+                                <td><?php echo date_format(new DateTime($row["tgl_pesan"]),'d-m-Y')  ?></td>
+                                <td><?php echo date_format(new DateTime($row["tgl_kembali"]),'d-m-Y') ?></td>
                                 <td><?php echo $row["lokasi"] ?></td>
                                 <td><?php echo $row["catatan"] ?></td>
                                 <td>Rp.<?php echo $jumlah ?>,-</td>
