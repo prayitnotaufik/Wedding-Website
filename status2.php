@@ -3,6 +3,12 @@
 <?php include 'config/connection.php' ?>
 <?php include 'includes/head.php' ?>
 
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+</head>
+
 <body>
     <?php include 'includes/navbar.php' ?>
     <div class="container mt-5 pt-5 " style="min-height:720px">
@@ -22,6 +28,7 @@
                         <th>Harga</th>
                         <th>Bukti Pembayaran</th>
                         <th>Status Pesanan</th>
+                        <th>Unduh Detail</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -156,6 +163,103 @@
                                             ?>
 
                                 </td>
+                                <td>
+
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn btn-block btn-outline-primary" data-toggle="modal" data-target="#detail<?php echo $row["id_pemesanan"] ?>">
+                                        Download
+                                    </button>
+                                    <!-- MODAL -->
+                                    <div class="modal fade canvas_div_pdf" id="detail<?php echo $row["id_pemesanan"] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body" style="margin-bottom:-35px">
+                                                    <center>
+                                                        <h4 class="media-heading">Detail Pesanan</h4>
+                                                    </center>
+                                                    <hr>
+                                                </div>
+                                                <div class="row" style="margin-top:0px">
+                                                    <div class="container">
+                                                        <div class="col-md-12">
+                                                            <table class="table">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <th>Nama Pemesan</th>
+                                                                        <td>
+                                                                            <?php
+                                                                                $id2 = $row["user_id"];
+                                                                                $query4 = "SELECT * FROM user WHERE id_user = '$id2'";
+                                                                                $result4 = mysqli_query($con,$query4);
+                                                                                $user = mysqli_fetch_assoc($result4);
+
+                                                                                echo $user["nama"];
+
+                                                                            ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Nama Paket</th>
+                                                                        <td>
+                                                                            <?php
+                                                                                    $id = $row["id_paket"];
+                                                                                    $query3 = "SELECT * FROM paket WHERE id_paket = '$id'";
+                                                                                    $result3 = mysqli_query($con, $query3);
+                                                                                    $paket2 = mysqli_fetch_assoc($result3);
+
+                                                                                    echo $paket2["nama_paket"];
+
+                                                                                    ?>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Tanggal Pesan</th>
+                                                                        <td><?php echo date_format(new DateTime($row["tgl_pesan"]), 'd-m-Y')  ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Tanggal Kembali</th>
+                                                                        <td><?php echo date_format(new DateTime($row["tgl_kembali"]), 'd-m-Y')  ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Lokasi</th>
+                                                                        <td><?php echo $row["lokasi"] ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Catatan</th>
+                                                                        <td><?php echo $row["catatan"] ?></td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Harga</th>
+                                                                        <td>Rp.<?php echo $jumlah ?>,-</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <th scope="row">Bukti Pembayaran</th>
+                                                                        <td> <?php
+                                                                                        if ($row["bukti_pembayaran"] != null) { ?>
+                                                                            <?php echo 'Sudah di Upload';
+                                                                                    } ?></td>
+                                                                    </tr>
+                                                                    <tr>
+
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <div>
+                                                                <a class="btn btn-block btn-outline-primary" onclick="getPDF()">Download</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                    <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- MODAL -->
+
+                                </td>
 
                             </tr>
                         <?php } ?>
@@ -167,6 +271,42 @@
             </table>
         </div>
     </div>
+    <script>
+        function getPDF() {
+
+            var HTML_Width = $(".canvas_div_pdf").width();
+            var HTML_Height = $(".canvas_div_pdf").height();
+            var top_left_margin = 15;
+            var PDF_Width = HTML_Width + (top_left_margin * 2);
+            var PDF_Height = (PDF_Width * 1.5) + (top_left_margin * 2);
+            var canvas_image_width = HTML_Width;
+            var canvas_image_height = HTML_Height;
+
+            var totalPDFPages = Math.ceil(HTML_Height / PDF_Height) - 1;
+
+
+            html2canvas($(".canvas_div_pdf")[0], {
+                allowTaint: true
+            }).then(function(canvas) {
+                canvas.getContext('2d');
+
+                console.log(canvas.height + "  " + canvas.width);
+
+
+                var imgData = canvas.toDataURL("image/jpeg", 1.0);
+                var pdf = new jsPDF('p', 'pt', [PDF_Width, PDF_Height]);
+                pdf.addImage(imgData, 'JPG', top_left_margin, top_left_margin, canvas_image_width, canvas_image_height);
+
+
+                for (var i = 1; i <= totalPDFPages; i++) {
+                    pdf.addPage(PDF_Width, PDF_Height);
+                    pdf.addImage(imgData, 'JPG', top_left_margin, -(PDF_Height * i) + (top_left_margin * 4), canvas_image_width, canvas_image_height);
+                }
+
+                pdf.save("HTML-Document.pdf");
+            });
+        };
+    </script>
     <?php include 'includes/scripts.php' ?>
     <?php include 'includes/footer.php' ?>
 
